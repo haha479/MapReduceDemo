@@ -19,7 +19,7 @@ public class WordCountMapper extends Mapper<LongWritable, Text, Text, IntWritabl
 
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-        //key:代表上一行到这一行的距离(以单个字符计数)
+        //key:偏移量, 代表上一行到这一行的距离(以单个字符计数)
         // 1 获取一行
         String line = value.toString();
 
