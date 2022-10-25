@@ -22,6 +22,7 @@ public class WordCountDriver {
         job.setReducerClass(WordCountReducer.class);
         // 4 设置map输出的KV类型
         job.setMapOutputKeyClass(Text.class);
+        job.setMapOutputValueClass(IntWritable.class);
         // 5 设置最终输出的KV类型
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
