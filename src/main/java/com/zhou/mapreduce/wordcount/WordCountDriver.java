@@ -29,7 +29,7 @@ public class WordCountDriver {
         // 6 设置输入路径和输出路径
         FileInputFormat.setInputPaths(job, new Path(args[0]));
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
-        // 7 提交job
+        // 7 提交job：参数true打印的日志信息更详细
         boolean result = job.waitForCompletion(true);
 
         System.exit(result ? 0 : 1);
