@@ -25,7 +25,7 @@ public class FlowDriver {
         // 5 设置最终输出的KV类型
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(FlowBean.class);
-
+        //设置使用自定义的分区类
         job.setPartitionerClass(ProvincePartitioner.class);
         job.setNumReduceTasks(5);
 
