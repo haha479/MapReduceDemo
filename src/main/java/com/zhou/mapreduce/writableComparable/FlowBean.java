@@ -76,7 +76,14 @@ public class FlowBean implements WritableComparable<FlowBean> {
         }else if (this.sumFlow < o.sumFlow){
             return 1;
         }else{
-            return 0;
+            //以上行流量进行二次排序
+            if (this.upFlow > o.upFlow){
+                return 1;
+            }else if (this.upFlow < o.upFlow){
+                return -1;
+            }else{
+                return 0;
+            }
         }
     }
 }
